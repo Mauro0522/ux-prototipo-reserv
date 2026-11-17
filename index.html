@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildSafe — Monitoreo de Vulnerabilidad Sísmica</title>
+    <!-- Fuentes de Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Vinculación del archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. BARRA DE NAVEGACIÓN (HEADER) -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <img src="assets/logo-azul.jpeg" alt="BuildSafe Logo" class="nav-logo">
+            <nav class="nav-menu">
+                <a href="#caracteristicas">Características</a>
+                <a href="#metodologia">Metodología</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="btn-accent" id="btn-login">Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <!-- 2. SECCIÓN PRINCIPAL (HERO SECTION) -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge-info">● Datos que protegen comunidades</span>
+                <h1>Monitoreo integral de riesgos y vulnerabilidad territorial</h1>
+                <p>Recopila información en campo, visualiza riesgos por manzana y transforma evidencia comunitaria en decisiones claras y oportunas.</p>
+                
+                <div class="hero-actions">
+                    <button class="btn-accent" id="btn-evaluacion">Iniciar evaluación &rarr;</button>
+                    <a href="#metodologia" class="link-secondary">Conocer metodología</a>
+                </div>
+
+                <div class="hero-accessibility-badges">
+                    <div class="acc-badge">
+                        <img src="assets/acc-escudo.png" alt="Icono Escudo">
+                        <span>Datos protegidos</span>
+                    </div>
+                    <div class="acc-badge">
+                        <img src="assets/acc-sin-conexion.png" alt="Icono Sin Conexión">
+                        <span>Trabajo sin conexión</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-mockup">
+                <img src="assets/dashboard-mockup.png" alt="BuildSafe Dashboard Mockup">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN DE CARACTERÍSTICAS (HISTORIAS DE USUARIO) -->
+    <section id="caracteristicas" class="features-section">
+        <div class="features-header">
+            <span class="section-tag">UNA PLATAFORMA, TODO EL TERRITORIO</span>
+            <h2>De la inspección en campo a la decisión estratégica</h2>
+            <p class="features-subtitle">Las 30 historias de usuario se integran en un flujo simple, diseñado para equipos comunitarios y técnicos.</p>
+        </div>
+
+        <div class="features-grid">
+            <!-- Tarjeta 1 -->
+            <div class="feature-card">
+                <div class="icon-container"><img src="assets/caract-casa.png" alt="Icono Casa"></div>
+                <h3>Evaluación de viviendas</h3>
+                <p>Fichas guiadas para registrar tipología, materiales, daños visibles y condiciones de ocupación.</p>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="feature-card">
+                <div class="icon-container"><img src="assets/caract-camara.png" alt="Icono Cámara"></div>
+                <h3>Evidencia en campo</h3>
+                <p>Captura fotografías y observaciones aun sin conexión. Todo se sincroniza al recuperar señal.</p>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="feature-card">
+                <div class="icon-container"><img src="assets/caract-pin.png" alt="Icono Pin"></div>
+                <h3>Geolocalización precisa</h3>
+                <p>Ubica cada registro por manzana y sector para construir una lectura territorial confiable.</p>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="feature-card">
+                <div class="icon-container"><img src="assets/caract-capas.png" alt="Icono Capas"></div>
+                <h3>Mapas de riesgo</h3>
+                <p>Visualiza patrones, filtra niveles de riesgo y prioriza zonas que requieren atención inmediata.</p>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="feature-card">
+                <div class="icon-container"><img src="assets/caract-grafico.png" alt="Icono Gráfico"></div>
+                <h3>Indicadores ejecutivos</h3>
+                <p>Convierte los datos recopilados en métricas claras para decisiones y seguimiento comunitario.</p>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="feature-card">
+                <div class="icon-container"><img src="assets/caract-portapapeles.png" alt="Icono Portapapeles"></div>
+                <h3>Reportes listos para compartir</h3>
+                <p>Genera reportes trazables con cobertura, severidad y recomendaciones para cada periodo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN METODOLOGÍA (SEMÁFORO ACCESIBLE) -->
+    <section id="metodologia" class="methodology-section">
+        <div class="methodology-container">
+            <div class="methodology-text">
+                <span class="section-tag">METODOLOGÍA ACCESIBLE</span>
+                <h2>La prioridad se entiende de un vistazo</h2>
+                <p>BuildSafe combina color, forma, iconografía y texto. Cada resultado se comunica con claridad para que ninguna decisión dependa únicamente de la percepción del color.</p>
+                <div class="methodology-stats">
+                    <div><strong>4</strong><span>variables clave</span></div>
+                    <div><strong>3</strong><span>niveles de acción</span></div>
+                    <div><strong>100%</strong><span>trazable</span></div>
+                </div>
+            </div>
+
+            <div class="methodology-card">
+                <span class="card-subtitle">CLASIFICACIÓN APLICADA</span>
+                <h3>Escala de vulnerabilidad</h3>
+                <span class="badge-redundant">Lectura redundante</span>
+                
+                <div class="risk-list">
+                    <div class="risk-item item-alto">
+                        <img src="assets/alerta-alto.png" alt="Alerta Alto">
+                        <div>
+                            <strong>Riesgo Alto</strong>
+                            <span>Atención prioritaria</span>
+                        </div>
+                    </div>
+                    <div class="risk-item item-medio">
+                        <img src="assets/alerta-medio.png" alt="Alerta Medio">
+                        <div>
+                            <strong>Riesgo Medio</strong>
+                            <span>Seguimiento requerido</span>
+                        </div>
+                    </div>
+                    <div class="risk-item item-bajo">
+                        <img src="assets/alerta-bajo.png" alt="Alerta Bajo">
+                        <div>
+                            <strong>Riesgo Bajo</strong>
+                            <span>Condición estable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN DE ACCIÓN FINAL -->
+    <section id="contacto" class="cta-section">
+        <div class="cta-box">
+            <span class="cta-tag">CONSTRUYAMOS COMUNIDADES MÁS SEGURAS</span>
+            <h2>Convierte el conocimiento local en prevención efectiva</h2>
+            <p>Conoce cómo BuildSafe puede acompañar la evaluación territorial de tu comunidad.</p>
+            <button class="btn-accent-large">Solicitar acceso &rarr;</button>
+        </div>
+    </section>
+
+    <!-- 6. PIE DE PÁGINA (FOOTER) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <img src="assets/logo-naranja.png" alt="Logo BuildSafe">
+                </div>
+                <p>Plataforma comunitaria para la evaluación, visualización y gestión de vulnerabilidad sísmica territorial.</p>
+            </div>
+            <div class="footer-center">
+                <h4>Documentación</h4>
+                <a href="#">Metodología de evaluación</a>
+                <a href="#">Guía para trabajo en campo</a>
+                <a href="#">Política de protección de datos</a>
+            </div>
+            <div class="footer-right">
+                <span class="badge-offline">● Sin conexión · Guardado local</span>
+                <p class="footer-credit">Proyecto desarrollado para fortalecer la resiliencia de las comunidades.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BuildSafe. Todos los derechos reservados.</p>
+            <p>Diseñado para decisiones claras y territorios seguros.</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación del archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

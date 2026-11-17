@@ -1,0 +1,582 @@
+/* ==========================================================================
+   STYLE.CSS - PLATAFORMA BUILDSAFE (LANDING PAGE DESKTOP)
+   ========================================================================== */
+
+/* 1. TOKENS DE DISEÑO (VARIABLES GLOBALES) */
+:root {
+    /* Paleta de Colores Institucionales y de Acción */
+    --primary-900: #083B57;
+    --primary-700: #0F5C8A;
+    --primary-500: #1A7FBF;
+    --primary-100: #DCEEF8;
+    
+    --accent-600: #F2994A;    /* Color de acción principal para alto brillo */
+    --accent-100: #FDEBD8;
+    
+    --neutral-900: #1F2937;   /* Texto principal (Contraste Asegurado) */
+    --neutral-100: #F3F4F6;   /* Fondo de pantalla base */
+    --white: #FFFFFF;
+
+    /* Semáforo de Riesgo Exclusivo */
+    --risk-alto: #D64545;
+    --risk-alto-bg: #E1F6E9;  /* Fondos suaves semáforo */
+    --risk-medio: #EBA61A;
+    --risk-bajo: #2E9E5B;
+
+    /* Tipografías y Dimensiones */
+    --font-display: 'Poppins', sans-serif;
+    --font-text: 'Arial', sans-serif;
+    --radius-ui: 10px;        /* Radio base de componentes de tu biblioteca */
+}
+
+/* 2. RESETEO GENERAL Y ACCESIBILIDAD */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base estándar */
+}
+
+body {
+    font-family: var(--font-text);
+    color: var(--neutral-900);
+    background-color: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 3. COMPONENTES REUTILIZABLES (BOTONES Y ELEMENTOS INTERACTIVOS ≥ 44px) */
+button, .btn-primary, .btn-accent, .btn-accent-large {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: var(--radius-ui);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px; /* Tamaño mínimo de toque táctil obligatorio */
+}
+
+.btn-primary {
+    background-color: var(--primary-500);
+    color: var(--white);
+    padding: 0 24px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-700);
+}
+
+.btn-accent {
+    background-color: var(--accent-600);
+    color: var(--white);
+    padding: 0 28px;
+    box-shadow: 0 4px 6px rgba(242, 153, 74, 0.2);
+}
+
+.btn-accent:hover {
+    background-color: #e08534;
+    transform: translateY(-1px);
+}
+
+.btn-accent-large {
+    background-color: var(--accent-600);
+    color: var(--white);
+    padding: 0 40px;
+    font-size: 16px;
+    min-height: 50px;
+}
+
+.btn-accent-large:hover {
+    background-color: #e08534;
+    box-shadow: 0 6px 12px rgba(242, 153, 74, 0.3);
+}
+
+/* Badges informativos */
+.badge-info {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-700);
+    background-color: var(--primary-100);
+    padding: 6px 16px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.section-tag {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-500);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* 4. BARRA DE NAVEGACIÓN (HEADER) */
+.navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    height: 80px; /* Aumentado de 38px a 52px para mayor legibilidad */
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 36px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--neutral-900);
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-500);
+}
+
+/* 5. SECCIÓN PRINCIPAL (HERO SECTION) */
+.hero-section {
+    background: radial-gradient(circle at 80% 20%, #eff7fd 0%, var(--white) 60%);
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--primary-900);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #4B5563; /* Gris suavizado con buen contraste */
+    margin-bottom: 32px;
+    max-width: 540px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.link-secondary {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--primary-700);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.link-secondary:hover {
+    color: var(--primary-900);
+    border-bottom-color: var(--primary-900);
+}
+
+.hero-accessibility-badges {
+    display: flex;
+    gap: 28px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 24px;
+}
+
+.acc-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.acc-badge img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.acc-badge span {
+    font-size: 13px; /* Mínimo funcional */
+    font-weight: 600;
+    color: #6B7280;
+}
+
+.hero-mockup img {
+    width: 100%;
+    border-radius: var(--radius-ui);
+    filter: drop-shadow(0 20px 30px rgba(8, 59, 87, 0.12)); /* Sombra optimizada para PNG transparente */
+}
+
+/* 6. SECCIÓN DE CARACTERÍSTICAS (HISTORIAS DE USUARIO) */
+.features-section {
+    background-color: var(--neutral-100);
+    padding: 100px 0;
+}
+
+.features-header {
+    max-width: 1280px;
+    margin: 0 auto 60px auto;
+    padding: 0 40px;
+}
+
+.features-header h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-900);
+    margin-bottom: 16px;
+    max-width: 600px;
+}
+
+.features-subtitle {
+    font-size: 16px;
+    color: #4B5563;
+    max-width: 550px;
+}
+
+.features-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.feature-card {
+    background-color: var(--white);
+    padding: 36px;
+    border-radius: var(--radius-ui);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+}
+
+.icon-container {
+    width: 64px;  /* Aumentado de 48px a 64px */
+    height: 64px; /* Aumentado de 48px a 64px */
+    background-color: var(--primary-100);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.icon-container img {
+    width: 60px;  /* El icono interno PNG ahora es más grande y visible (de 24px a 36px) */
+    height: 60px;
+    object-fit: contain;
+}
+
+.feature-card h3 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+/* 7. SECCIÓN METODOLOGÍA (SEMÁFORO ACCESIBLE) */
+.methodology-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.methodology-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.methodology-text h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-900);
+    margin-bottom: 20px;
+}
+
+.methodology-text p {
+    font-size: 16px;
+    color: #4B5563;
+    margin-bottom: 40px;
+}
+
+.methodology-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.methodology-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.methodology-stats strong {
+    font-family: var(--font-display);
+    font-size: 36px;
+    color: var(--primary-500);
+    line-height: 1;
+}
+
+.methodology-stats span {
+    font-size: 13px;
+    color: #6B7280;
+    margin-top: 4px;
+}
+
+/* Tarjeta de clasificación redundante */
+.methodology-card {
+    background-color: var(--white);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: var(--radius-ui);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    position: relative;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #9CA3AF;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.methodology-card h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: 20px;
+}
+
+.badge-redundant {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--neutral-100);
+    color: #4B5563;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.risk-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.risk-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.risk-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.risk-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.risk-item strong {
+    font-family: var(--font-display);
+    font-size: 16px;
+}
+
+.risk-item span {
+    font-size: 13px;
+    color: #4B5563;
+}
+
+/* Aplicación de colores funcionales semáforo con opacidad controlada */
+.item-alto { background-color: #FDF2F2; color: #9B1C1C; border-left: 4px solid var(--risk-alto); }
+.item-medio { background-color: #FEF8EE; color: #925F06; border-left: 4px solid var(--risk-medio); }
+.item-bajo { background-color: #F3FAF4; color: #14532D; border-left: 4px solid var(--risk-bajo); }
+
+/* 8. SECCIÓN DE ACCIÓN FINAL */
+.cta-section {
+    padding: 60px 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cta-box {
+    background-color: var(--primary-900);
+    background-image: radial-gradient(circle at 90% 80%, var(--primary-700) 0%, transparent 60%);
+    border-radius: var(--radius-ui);
+    padding: 64px;
+    text-align: left;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cta-tag {
+font-family: var(--font-display);
+font-size: 13px;
+font-weight: 700;
+color: var(--accent-600);
+letter-spacing: 1px;
+margin-bottom: 16px;
+}
+.cta-box h2 {
+font-family: var(--font-display);
+font-size: 32px;
+font-weight: 700;
+max-width: 600px;
+line-height: 1.2;
+margin-bottom: 12px;
+}
+.cta-box p {
+font-size: 16px;
+color: var(--primary-100);
+margin-bottom: 32px;
+max-width: 500px;
+}
+/* 9. PIE DE PÁGINA (FOOTER) */
+.footer {
+background-color: #111827; /* Fondo oscuro ejecutivo */
+color: #9CA3AF;
+padding: 80px 0 30px 0;
+border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-container {
+max-width: 1280px;
+margin: 0 auto;
+padding: 0 40px;
+display: grid;
+grid-template-columns: 1.5fr 1fr 1.5fr;
+gap: 60px;
+margin-bottom: 60px;
+}
+.footer-brand img {
+    height: 80px; /* Aumentado de 34px a 48px para darle mayor presencia institucional */
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+.footer-left p {
+font-size: 14px;
+line-height: 1.6;
+max-width: 320px;
+}
+.footer-center h4 {
+color: var(--white);
+font-family: var(--font-display);
+font-size: 15px;
+font-weight: 600;
+margin-bottom: 20px;
+}
+.footer-center {
+display: flex;
+flex-direction: column;
+}
+.footer-center a {
+color: #9CA3AF;
+text-decoration: none;
+font-size: 14px;
+margin-bottom: 12px;
+transition: color 0.2s ease;
+}
+.footer-center a:hover {
+color: var(--white);
+}
+.footer-right {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+text-align: right;
+}
+.badge-offline {
+background-color: #064E3B; /* Verde muy oscuro para alto contraste /
+color: #A7F3D0;            / Texto verde claro legible */
+font-family: var(--font-display);
+font-size: 13px;
+font-weight: 600;
+padding: 6px 16px;
+border-radius: 50px;
+margin-bottom: 16px;
+}
+.footer-credit {
+font-size: 13px;
+max-width: 300px;
+}
+.footer-bottom {
+max-width: 1280px;
+margin: 0 auto;
+padding: 30px 40px 0 40px;
+border-top: 1px solid rgba(255,255,255,0.05);
+display: flex;
+justify-content: space-between;
+font-size: 12px;
+}
