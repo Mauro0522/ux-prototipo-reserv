@@ -18,8 +18,13 @@ BuildSafe es una propuesta de solución digital orientada a guiar a las familias
 HTML5, CSS3 y JavaScript (además de los recursos y prototipos vinculados del proyecto).
 
 ## Estructura del repositorio
+.
+├── assets/       # Imágenes y recursos gráficos
+├── index.html    # Estructura principal de la página
+├── style.css     # Estilos, paleta y diseño responsive
+├── script.js     # Interacciones y comportamientos en frontend
+└── README.md     # Documentación del proyecto
 
-```text
 ## Funcionalidades y alcance
 
 - Evaluación preliminar y orientativa de la vulnerabilidad sísmica de viviendas autoconstruidas en Lima y Callao.
@@ -36,9 +41,3 @@ HTML5, CSS3 y JavaScript (además de los recursos y prototipos vinculados del pr
 | Oscanoa Villanueva, Mauro Tomas | U202519508 |
 | Cusco Velasquez, Alejandro Jerico | U202511679 |
 | Veramendi Salas, Raul Shaiel | U202512344 |
-.
-├── assets/       # Imágenes y recursos gráficos
-├── index.html    # Estructura principal de la página
-├── style.css     # Estilos, paleta y diseño responsive
-├── script.js     # Interacciones y comportamientos en frontend
-└── README.md     # Documentación del proyecto
