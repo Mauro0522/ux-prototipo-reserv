@@ -20,6 +20,22 @@ HTML5, CSS3 y JavaScript (además de los recursos y prototipos vinculados del pr
 ## Estructura del repositorio
 
 ```text
+## Funcionalidades y alcance
+
+- Evaluación preliminar y orientativa de la vulnerabilidad sísmica de viviendas autoconstruidas en Lima y Callao.
+- Presentación de recomendaciones priorizadas de prevención y recursos/enlaces del prototipo UX/UI.
+- Navegación entre secciones y diseño adaptable (responsive).
+
+## Integrantes
+
+| Integrante | Código |
+| :--- | :--- |
+| Banda Aguirre, Josue Martin | U202512107 |
+| Mesias Luna, Adelise Aileen Alessandra | U202515643 |
+| Merjildo Paquiyauri, Andrea Nicolle | U202517416 |
+| Oscanoa Villanueva, Mauro Tomas | U202519508 |
+| Cusco Velasquez, Alejandro Jerico | U202511679 |
+| Veramendi Salas, Raul Shaiel | U202512344 |
 .
 ├── assets/       # Imágenes y recursos gráficos
 ├── index.html    # Estructura principal de la página
